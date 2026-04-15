@@ -1,3 +1,5 @@
+import './CoreConcept.css'
+//Seperation of Concerns ->
 export default function CoreConcept({image,title,description}){
   return(
     <li>
