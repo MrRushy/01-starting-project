@@ -1,10 +1,10 @@
 import './TabButton.css';
 
-export default function TabButton({children, onSelect}){
+export default function TabButton({children, onSelect, isSelected}){ //props in {}
     //closure
     return(
         <li>
-            <button onClick={onSelect}>{children}</button>
+            <button className= {isSelected ? 'active' : ''} onClick={onSelect}>{children}</button>
         </li>
     )
 }

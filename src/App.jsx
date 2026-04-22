@@ -2,7 +2,7 @@ import { CORE_CONCEPTS, EXAMPLES } from './data';
 import Header from './components/Header/Header';
 import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
-import { useState } from 'react';
+import { useState } from 'react';  //react hooks
 //function UserData(){
 //  const user = {first:"Rushil",last:"Shanmugam",age:"22"};
  
@@ -74,10 +74,10 @@ function App() {
        <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={()=>handleSelect("components")}>Components</TabButton>
-            <TabButton onSelect={()=>handleSelect("jsx")}>JSX</TabButton>
-            <TabButton onSelect={()=>handleSelect("props")}>Props</TabButton>
-            <TabButton onSelect={()=>handleSelect("state")}>State</TabButton>
+            <TabButton isSelected = {selectedTopic === "components"} onSelect={()=>handleSelect("components")}>Components</TabButton>
+            <TabButton isSelected = {selectedTopic === "jsx"} onSelect={()=>handleSelect("jsx")}>JSX</TabButton>
+            <TabButton isSelected = {selectedTopic === "props"} onSelect={()=>handleSelect("props")}>Props</TabButton>
+            <TabButton isSelected = {selectedTopic === "state"} onSelect={()=>handleSelect("state")}>State</TabButton>
           </menu>
           {tabContent}
          
