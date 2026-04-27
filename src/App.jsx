@@ -1,8 +1,8 @@
 import { CORE_CONCEPTS, EXAMPLES } from './data';
 import Header from './components/Header/Header';
-import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
 import { useState } from 'react';  //react hooks
+import CoreConcepts from './components/CoreConcept/CoreConcepts';
 //function UserData(){
 //  const user = {first:"Rushil",last:"Shanmugam",age:"22"};
  
@@ -41,20 +41,10 @@ function App() {
     console.log(tabContent)
   }
   return (
-    <div>
+    <>
       <Header/>
       <main>
-       <section id="core-concepts">
-         <h2>Time to get started!</h2>
-        <ul>
-          {
-            //Array of JS object but i need Array of HTML objects
-            
-              CORE_CONCEPTS.map((conceptItem)=> <CoreConcept {...conceptItem} /> )
-            
-          }
-        </ul>
-       </section>
+        <CoreConcepts/>
        <section id="examples">
           <h2>Examples</h2>
           <menu>
@@ -67,7 +57,7 @@ function App() {
          
        </section>
       </main>
-    </div>
+    </>
   );
 }
 
